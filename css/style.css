@@ -1,122 +1,52 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-}
-
-/* Navbar - Ajustada para não travar no celular */
 .navbar {
-    position: absolute; /* Mudado de fixed para absolute para permitir mexer/rolar */
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 1000;
+    position: absolute; /* Mudado de fixed para permitir rolar e ver as opções no celular */
+    top: 0; width: 100%; display: flex; justify-content: space-between;
+    align-items: center; padding: 20px 8%; background: #000; z-index: 1000;
 }
+.main-logo { height: 60px; width: auto; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li a { color: #fff; text-decoration: none; margin-left: 20px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; }
 
-.main-logo {
-    height: 60px;
-    width: auto;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Hero Section com Fundo 10% */
-.hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-}
-
+/* HERO - Fundo 10% Opacidade */
+.hero { height: 100vh; display: flex; align-items: center; justify-content: center; position: relative; text-align: center; }
 .hero-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     background: url('../img/fundo.png') no-repeat center center/cover;
-    opacity: 0.1; /* 10% de opacidade */
-    z-index: -1;
+    opacity: 0.1; z-index: -1;
+}
+.hero-content h1 { font-size: 3rem; letter-spacing: 10px; font-weight: 700; }
+
+/* GRIDS (RESOLVENDO A BAGUNÇA VISUAL) */
+.section-padding { padding: 80px 8%; text-align: center; }
+.bg-darker { background-color: #050505; }
+.section-title { text-transform: uppercase; letter-spacing: 4px; margin-bottom: 50px; border-bottom: 1px solid #222; display: inline-block; padding-bottom: 10px; }
+
+.services-grid, .stock-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    letter-spacing: 10px;
-    margin-bottom: 10px;
-}
+/* CARDS COM FUNDO SÓLIDO PARA CONTRASTE */
+.service-item, .car-card { background: #111; border: 1px solid #222; padding: 30px; }
+.car-img { height: 200px; background-size: cover; background-position: center; margin-bottom: 15px; border: 1px solid #333; }
 
-/* Estilo dos Botões e Rodapé */
-.btn-premium, .btn-whatsapp {
-    display: inline-block;
-    padding: 12px 30px;
-    border: 1px solid #fff;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-top: 20px;
+/* BOTÕES */
+.btn-premium, .btn-sm, .btn-whatsapp {
+    display: inline-block; padding: 12px 25px; border: 1px solid #fff;
+    color: #fff; text-decoration: none; text-transform: uppercase; font-size: 0.7rem; transition: 0.3s;
 }
+.btn-premium:hover, .btn-whatsapp:hover { background: #fff; color: #000; }
+.contact-buttons { display: flex; justify-content: center; gap: 15px; margin-top: 30px; }
+.btn-whatsapp.outline { background: none; }
 
-.btn-whatsapp.outline {
-    background: none;
-    margin-left: 10px;
-}
+/* RODAPÉ */
+.contact-footer { padding: 60px 8%; background: #000; border-top: 1px solid #1a1a1a; text-align: center; }
+.about-text { max-width: 800px; margin: 0 auto; line-height: 1.6; color: #ccc; }
 
-.contact-footer {
-    padding: 60px 8%;
-    text-align: center;
-    background-color: #000;
-    border-top: 1px solid #1a1a1a;
-}
-
-.contact-footer h3 {
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contact-buttons {
-    margin-top: 30px;
-}
-
-.copy {
-    font-size: 0.6rem;
-    color: #444;
-    margin-top: 40px;
-}
-
-/* Ajuste para telas pequenas (Celular) */
-@media (max-width: 600px) {
-    .nav-links {
-        display: none; /* Esconde o menu de texto no celular para não amontoar */
-    }
-    .hero-content h1 {
-        font-size: 2rem;
-    }
+/* AJUSTE PARA CELULAR */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; padding: 20px 0; }
+    .nav-links { margin-top: 20px; flex-wrap: wrap; justify-content: center; }
+    .nav-links li { margin: 5px 10px; }
+    .hero-content h1 { font-size: 2rem; letter-spacing: 5px; }
+    .contact-buttons { flex-direction: column; align-items: center; }
 }
