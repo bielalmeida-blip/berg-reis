@@ -6,9 +6,9 @@
 }
 
 body {
-    background-color: #000000; /* Preto Absoluto */
-    color: #FFFFFF;
-    font-family: 'Montserrat', sans-serif;
+    background-color: #000000; /* Fundo Preto Absoluto */
+    color: #FFFFFF; /* Texto Branco */
+    font-family: 'Montserrat', sans-serif; /* Fonte Premium */
     line-height: 1.6;
     overflow-x: hidden;
 }
@@ -22,15 +22,27 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 8%;
-    background: rgba(0, 0, 0, 0.9);
+    background: #000; /* Fundo preto sólido */
     z-index: 1000;
     border-bottom: 1px solid #1a1a1a;
 }
 
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .main-logo {
-    height: 60px;
+    height: 55px; /* Tamanho da logo */
     width: auto;
-    filter: brightness(1.1);
+}
+
+.logo-text {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -41,11 +53,10 @@ body {
 .nav-links li a {
     color: #fff;
     text-decoration: none;
-    margin-left: 25px;
-    font-size: 0.75rem;
+    margin-left: 20px;
+    font-size: 0.65rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 400;
     transition: 0.3s;
 }
 
@@ -53,7 +64,7 @@ body {
     color: #888;
 }
 
-/* --- HERO SECTION (Onde fica o fundo 10%) --- */
+/* --- HERO SECTION (Fundo 10%) --- */
 .hero {
     height: 100vh;
     display: flex;
@@ -75,104 +86,205 @@ body {
 }
 
 .main-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    letter-spacing: 15px;
+    font-size: clamp(2.5rem, 8vw, 4rem);
+    letter-spacing: 12px;
     font-weight: 700;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
-    font-size: 1rem;
-    letter-spacing: 8px;
+    font-size: 0.9rem;
+    letter-spacing: 6px;
     text-transform: uppercase;
     color: #888;
 }
 
 .divider {
-    width: 60px;
+    width: 50px;
     height: 1px;
     background: #fff;
-    margin: 30px auto;
+    margin: 25px auto;
 }
 
 .tagline {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif; /* Erro 2 Corrigido */
+    font-size: 1rem;
     color: #ccc;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 }
 
 /* --- BOTÕES PREMIUM --- */
-.btn-main, .btn-whatsapp {
+.btn-main, .btn-whatsapp, .btn-outline {
     display: inline-block;
-    padding: 15px 40px;
-    background: #fff;
-    color: #000;
+    padding: 12px 35px;
+    border: 1px solid #fff;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 2px;
     transition: 0.4s;
 }
 
-.btn-main:hover {
-    background: #888;
-    color: #fff;
+.btn-main:hover, .btn-whatsapp:hover {
+    background: #fff;
+    color: #000;
 }
 
-.btn-whatsapp.outline {
+.btn-outline {
     background: transparent;
-    border: 1px solid #fff;
-    color: #fff;
+    border-color: #444;
+}
+
+.btn-outline:hover {
+    border-color: #fff;
+}
+
+/* --- CONFIGURAÇÕES DE SEÇÃO --- */
+.section-container {
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.bg-dark {
+    background-color: #050505; /* Fundo um pouco mais claro que o preto total */
+}
+
+.section-title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
+}
+
+/* --- ERRO 4: GRID DE SERVIÇOS --- */
+.grid-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-item {
+    border: 1px solid #1a1a1a;
+    padding: 40px 20px;
+    transition: 0.3s;
+}
+
+.service-item:hover {
+    background: #fff;
+    color: #000;
+}
+
+.service-item h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- ERRO 3: GRID DE ESTOQUE --- */
+.grid-stock {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #111;
+    border: 1px solid #1a1a1a;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #fff;
+    transform: translateY(-5px);
+}
+
+.card-img {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-info {
+    padding: 25px;
+}
+
+.card-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* --- ERRO 5: SOBRE --- */
+.container-small {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.8;
 }
 
 /* --- RODAPÉ (FOOTER) --- */
 .footer {
-    padding: 100px 8% 50px;
+    padding: 80px 8%;
     background: #000;
     text-align: center;
-    border-top: 1px solid #111;
+    border-top: 1px solid #1a1a1a;
 }
 
 .footer-title {
-    font-size: 1.5rem;
-    letter-spacing: 5px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .address {
     color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 40px;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
 }
 
 .whatsapp-group {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap; /* Ajuste para celular */
 }
 
+.btn-whatsapp {
+    background: #fff;
+    color: #000;
+}
+
+.btn-whatsapp.outline {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
 .copyright {
-    margin-top: 60px;
+    margin-top: 50px;
     font-size: 0.6rem;
     text-transform: uppercase;
     color: #333;
-    letter-spacing: 2px;
 }
 
 /* --- RESPONSIVIDADE (MOBILE) --- */
 @media (max-width: 768px) {
     .nav-links {
-        display: none; /* Esconde menu lateral no mobile para não bugar */
+        display: none; /* Esconde menu lateral no mobile para não bugar a logo */
+    }
+    .logo-area {
+        justify-content: center;
+        width: 100%;
     }
     .main-title {
-        letter-spacing: 8px;
-    }
-    .navbar {
-        justify-content: center;
+        letter-spacing: 5px;
     }
 }
