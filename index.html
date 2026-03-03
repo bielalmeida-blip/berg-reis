@@ -4,41 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berg Reis | Car Specialist</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo-area">
-            <img src="img/logo.jpg" alt="Berg Reis" class="main-logo">
+            <img src="img/logo.jpg" alt="Berg Reis Logo" class="main-logo">
         </div>
-        <nav>
+        <nav class="nav-container">
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#estoque">Estoque</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li><a href="#contato">Endereço</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-content">
-            <h1>BERG REIS</h1>
+        <div class="hero-bg-overlay"></div> <div class="hero-content">
+            <h1 class="main-title">BERG REIS</h1>
             <p class="subtitle">Car Specialist</p>
+            <div class="divider"></div>
             <p class="tagline">“Excelência em Detalhamento Automotivo”</p>
-            <a href="#servicos" class="btn-premium">Conheça nossos serviços</a>
+            <a href="#servicos" class="btn-main">Explorar Serviços</a>
         </div>
     </section>
 
-    <footer id="contato" class="contact-footer">
-        <h3>Nosso Endereço</h3> 
-        <p>Rua Dr. Gilberto Studart, 155, Cocó, Parque Shopping Sala 49, Fortaleza-CE</p>
-        <div class="contact-buttons">
-            <a href="https://wa.me/5585981511771" target="_blank" class="btn-whatsapp">WhatsApp Estética</a>
-            <a href="https://wa.me/5585996665300" target="_blank" class="btn-whatsapp outline">WhatsApp Vendas</a>
+    <section id="estoque" class="section-container bg-dark">
+        <h2 class="section-title">Estoque Exclusivo</h2>
+        <div class="grid-layout">
+            <div class="card">
+                <div class="card-img" style="background-image: url('img/sto.jpg');"></div>
+                <div class="card-info">
+                    <h3>Lamborghini STO</h3>
+                    <a href="https://wa.me/5585996665300" class="btn-outline">Consultar Vendas</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img" style="background-image: url('img/911.webp');"></div>
+                <div class="card-info">
+                    <h3>Porsche 911</h3>
+                    <a href="https://wa.me/5585996665300" class="btn-outline">Consultar Vendas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato" class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Nosso Endereço</h2>
+            <p class="address">Rua Dr. Gilberto Studart, 155, Cocó<br>Parque Shopping Sala 49, Fortaleza-CE</p>
+            
+            <div class="whatsapp-group">
+                <a href="https://wa.me/5585981511771" target="_blank" class="btn-whatsapp">
+                    <span>WhatsApp Estética</span>
+                </a>
+                <a href="https://wa.me/5585996665300" target="_blank" class="btn-whatsapp outline">
+                    <span>WhatsApp Vendas</span>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 Berg Reis Car Specialist</p>
         </div>
     </footer>
 
