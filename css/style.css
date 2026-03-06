@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 }
 
+
 body {
     background-color: #000000 !important;
     color: #ffffff;
@@ -14,7 +15,10 @@ body {
 }
 
 
-/* --- NAVBAR --- */
+/* -----------------------------------------------------------
+   BARRA DE NAVEGAÇÃO (NAVBAR)
+----------------------------------------------------------- */
+
 .navbar {
     position: absolute;
     top: 0;
@@ -22,19 +26,59 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 8%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 8%;
+    padding-right: 8%;
     z-index: 1000;
 }
+
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+/* TAMANHO DO LOGO RESTAURADO */
+.main-logo {
+    height: 50px;
+    width: auto;
+}
+
 
 .logo-text {
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 1rem;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
 }
 
 
-/* --- HERO (HOME) --- */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+
+.nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    opacity: 0.7;
+    transition: 0.3s ease;
+}
+
+
+/* -----------------------------------------------------------
+   SEÇÃO HERO (ABERTURA DO SITE)
+----------------------------------------------------------- */
+
 .hero {
     height: 100vh;
     display: flex;
@@ -44,155 +88,190 @@ body {
     position: relative;
 }
 
-.main-title {
-    font-size: clamp(2.5rem, 10vw, 4.5rem);
-    font-weight: 300;
-    letter-spacing: 18px;
-    margin-bottom: 15px;
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/fundo.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.1;
+    z-index: -1;
 }
+
+
+.main-title {
+    font-size: clamp(2rem, 10vw, 4rem);
+    font-weight: 300;
+    letter-spacing: 15px;
+    margin-bottom: 10px;
+}
+
 
 .tagline {
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #cccccc;
-    margin-bottom: 90px !important; /* ESPAÇO GENEROSO PARA O BOTÃO */
-    letter-spacing: 2px;
+    margin-bottom: 80px !important;
+    letter-spacing: 1px;
 }
 
 
-/* --- SEÇÃO CONTAINER (GERAL) --- */
+/* -----------------------------------------------------------
+   SERVIÇOS (QUADRADOS ORGANIZADOS)
+----------------------------------------------------------- */
+
 .section-container {
-    padding-top: 150px;    /* AUMENTEI O RESPIRO SUPERIOR */
-    padding-bottom: 150px; /* AUMENTEI O RESPIRO INFERIOR */
+    padding-top: 120px;
+    padding-bottom: 120px;
     padding-left: 8%;
     padding-right: 8%;
     text-align: center;
 }
 
+
 .section-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 300;
-    letter-spacing: 8px;
-    margin-bottom: 100px;  /* MAIS ESPAÇO ABAIXO DO TÍTULO */
+    letter-spacing: 6px;
+    margin-bottom: 70px;
     text-transform: uppercase;
 }
 
-
-/* -----------------------------------------------------------
-   SERVIÇOS (GRID ORGANIZADO)
------------------------------------------------------------ */
 
 .grid-services {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 35px;             /* ESPAÇO ENTRE OS QUADRADOS */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     width: 100%;
 }
 
+
 .service-item {
-    border: 1px solid #222222;
-    padding: 60px 20px;    /* MAIS ESPAÇO DENTRO DO QUADRADO */
+    border: 1px solid #111111;
+    padding: 40px;
     background-color: #050505;
-    transition: 0.4s ease;
+    transition: 0.3s ease;
 }
 
+
 .service-item h3 {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 300;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     text-transform: uppercase;
 }
 
 
+.service-item:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
 /* -----------------------------------------------------------
-   ESTOQUE (DESIGN SEM APERTO)
+   ESTOQUE (DESIGN LIMPO E VALORES)
 ----------------------------------------------------------- */
+
+.bg-minimal {
+    background-color: #050505;
+}
+
 
 .grid-stock {
     display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 100px;            /* ESPAÇO GIGANTE ENTRE OS CARROS */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 60px;
 }
+
 
 .card {
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    gap: 20px;             /* ESPAÇO ENTRE FOTO E TEXTO */
 }
 
+
 .card-img {
-    height: 400px;         /* FOTO MAIOR */
+    height: 350px;
     background-size: cover;
     background-position: center;
     width: 100%;
 }
 
+
 .card-info {
-    padding: 20px;
+    padding: 30px 10px;
+    text-align: center;
 }
 
+
+.card-info h3 {
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+
+/* DESCRIÇÃO TÉCNICA PEQUENA */
 .card-description {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
     color: #888888;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+
+/* PREÇO GRANDE E EM NEGRITO */
 .card-price {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 40px;   /* DISTÂNCIA PARA O BOTÃO VENDAS */
+    margin-bottom: 25px;
 }
 
 
 /* -----------------------------------------------------------
-   AJUSTES EXCLUSIVOS PARA CELULAR (IPHONE 12 PRO)
+   AJUSTES PARA CELULAR (IPHONE 12 PRO)
 ----------------------------------------------------------- */
 
 @media (max-width: 768px) {
     
-    .section-container {
-        padding-top: 100px;
-        padding-bottom: 100px;
+    .navbar {
+        flex-direction: column;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
 
-    .section-title {
-        margin-bottom: 60px;
+
+    .nav-links {
+        margin-top: 25px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 
-    /* SERVIÇOS EM 2 COLUNAS BEM ESPAÇADAS */
+
+    /* SERVIÇOS EM 2 COLUNAS NO CELULAR */
     .grid-services {
         grid-template-columns: 1fr 1fr;
-        gap: 15px;
     }
 
-    .service-item {
-        padding: 40px 10px;
-    }
-
-    /* ESTOQUE - UM CARRO POR VEZ COM MUITO ESPAÇO */
-    .grid-stock {
-        gap: 80px;         /* IMPEDE QUE OS CARROS FICAREM JUNTOS */
-    }
 
     .card-img {
-        height: 280px;
+        height: 260px;
     }
+
 
     .card-price {
-        font-size: 1.4rem;
-    }
-
-    /* BOTÕES WHATSAPP NO RODAPÉ */
-    .whatsapp-group {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    
-    .btn-zap {
-        width: 100%;
-        max-width: 300px;
+        font-size: 1.2rem;
     }
 }
