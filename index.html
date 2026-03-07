@@ -1,131 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berg Reis | Car Specialist</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
-
+    <title>Berg Reis | Car Specialist - Luxo e Performance</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header class="navbar">
-        <div class="logo-area">
-            <img src="img/logo.png" alt="Berg Reis" class="main-logo">
-            <span class="logo-text">Berg Reis</span>
-        </div>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#estoque">Estoque</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Endereço</a></li>
-            </ul>
-        </nav>
-    </header>
-
+    <nav class="navbar">
+        <div class="logo">BERG REIS</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#estoque">Estoque</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
 
     <section id="home" class="hero">
-        <div class="hero-bg-overlay"></div>
         <div class="hero-content">
-            <h1 class="main-title">BERG REIS</h1>
-            <p class="subtitle">Car Specialist</p>
-            <div class="divider"></div>
-            <p class="tagline">“Excelência em Detalhamento Automotivo”</p>
-            <a href="#servicos" class="btn-main">Explorar</a>
+            <h2 class="sub-brand">CAR SPECIALIST</h2>
+            <h1 class="main-brand">BERG REIS</h1>
+            <p class="tagline">Excelência em Detalhamento Automotivo</p>
+            <a href="#servicos" class="btn-outline">Conheça nossos serviços</a>
         </div>
     </section>
 
+    <section id="servicos" class="section">
+        <h2 class="section-title">Serviços Exclusive</h2>
+        <div class="services-grid">
+            <div class="service-item"><span>01</span> PPF Regenerativo</div>
+            <div class="service-item"><span>02</span> Correção de Pintura</div>
+            <div class="service-item"><span>03</span> Nanocerâmica</div>
+            <div class="service-item"><span>04</span> Tratamento para Couros</div>
+            <div class="service-item"><span>05</span> Películas Solares</div>
+            <div class="service-item"><span>06</span> Lavagem Detalhada</div>
+            <div class="service-item"><span>07</span> Detalhamento Premium (Bikes)</div>
+            <div class="service-item"><span>08</span> Proteção de Quadro (PPF)</div>
+        </div>
+    </section>
 
-    <section id="servicos" class="section-container">
-        <h2 class="section-title">Serviços Premium</h2>
-        
-        <div class="grid-services">
-            <div class="service-item">
-                <h3>PPF Regenerativo</h3>
+    <section id="estoque" class="section bg-dark">
+        <h2 class="section-title">Estoque Premium</h2>
+        <div class="stock-grid">
+            <div class="car-card">
+                <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="car-info">
+                    <h3>Lamborghini STO</h3>
+                    <button class="btn-small">Saiba Mais</button>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>Correção de Pintura</h3>
+            <div class="car-card">
+                <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="car-info">
+                    <h3>Porsche 911</h3>
+                    <button class="btn-small">Saiba Mais</button>
+                </div>
             </div>
-            <div class="service-item">
-                <h3>Nanocerâmica</h3>
-            </div>
-            <div class="service-item">
-                <h3>Tratamento de Couro</h3>
-            </div>
-            <div class="service-item">
-                <h3>Películas Solares</h3>
-            </div>
-            <div class="service-item">
-                <h3>Lavagem Detalhada</h3>
-            </div>
-            <div class="service-item">
-                <h3>Detailing para Bikes</h3>
-            </div>
-            <div class="service-item">
-                <h3>PPF para Quadros</h3>
+            <div class="car-card">
+                <div class="car-img" style="background-image: url('https://images.unsplash.com/photo-1621135802920-133df287f89c?auto=format&fit=crop&w=800&q=80')"></div>
+                <div class="car-info">
+                    <h3>McLaren 765LT</h3>
+                    <button class="btn-small">Saiba Mais</button>
+                </div>
             </div>
         </div>
     </section>
 
-
-    <section id="estoque" class="section-container bg-minimal">
-        <h2 class="section-title">Estoque Exclusivo</h2>
-        
-        <div class="grid-stock">
-
-            <div class="card">
-                <div class="card-img" style="background-image: url('img/sto.jpg');"></div>
-                <div class="card-info">
-                    <h3>LAMBORGHINI STO</h3>
-                    <p class="card-description">V10 5.2L | 640CV | Track-focused</p>
-                    <p class="card-price">R$ 6.500.000</p>
-                    <a href="https://wa.me/5585996665300" class="btn-card">Vendas</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img" style="background-image: url('img/911.webp');"></div>
-                <div class="card-info">
-                    <h3>PORSCHE 911</h3>
-                    <p class="card-description">Flat-Six 3.0T | 450CV | Câmbio PDK</p>
-                    <p class="card-price">R$ 1.200.000</p>
-                    <a href="https://wa.me/5585996665300" class="btn-card">Vendas</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-img" style="background-image: url('img/laren.jpg');"></div>
-                <div class="card-info">
-                    <h3>MCLAREN 600LT SPIDER</h3>
-                    <p class="card-description">2020 | 10.400KM | IMPORTAÇÃO OFICIAL</p>
-                    <p class="card-price">R$ 3.090.000</p>
-                    <a href="https://wa.me/5585996665300" class="btn-card">Vendas</a>
-                </div>
-            </div>
-
+    <section id="sobre" class="section sobre-container">
+        <div class="sobre-text">
+            <h2 class="section-title left">Sobre a Berg Reis</h2>
+            <p>Atuamos no segmento de alto padrão com foco em exclusividade e perfeccionismo. Nossa expertise abrange desde supercarros e motos até aeronaves e quadros de bicicletas de alta performance. Cada projeto é tratado como uma obra de arte única.</p>
         </div>
     </section>
-
 
     <footer id="contato" class="footer">
-        <h2 class="footer-title">Nosso Endereço</h2>
-        <p class="address">Rua Dr. Gilberto Studart, 155, Cocó<br>Parque Shopping Sala 49, Fortaleza-CE</p>
-        
-        <div class="whatsapp-group">
-            <a href="https://wa.me/5585981511771" target="_blank" class="btn-zap">WhatsApp Estética</a>
-            <a href="https://wa.me/5585996665300" target="_blank" class="btn-zap outline">WhatsApp Vendas</a>
+        <div class="contact-info">
+            <h3>Fale com um Especialista</h3>
+            <p>Rua Dr. Gilberto Studart, 155, Cocó</p>
+            <p>Parque Shopping Sala 49, Fortaleza-CE</p>
+            <a href="https://wa.me/5585999999999" class="btn-whatsapp">WhatsApp Especialista</a>
         </div>
-        
-        <p class="copyright">&copy; 2026 Berg Reis Car Specialist</p>
     </footer>
 
 </body>
-
 </html>

@@ -1,277 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    text-decoration: none !important; /* MATA O ROXO E SUBINHADO */
+:root {
+    --primary: #ffffff;
+    --bg-black: #050505;
+    --gray: #1a1a1a;
+    --text-muted: #a0a0a0;
+    --transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Reset Geral */
+* { margin: 0; padding: 0; box-box: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: var(--bg-black); color: var(--primary); font-family: 'Inter', sans-serif; line-height: 1.6; }
 
-body {
-    background-color: #000000 !important;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
-    overflow-x: hidden;
-    line-height: 1.6;
-}
-
-
-/* -----------------------------------------------------------
-   NAVBAR (LOGO E MENU)
------------------------------------------------------------ */
-
+/* Menu */
 .navbar {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 8%;
-    z-index: 1000;
+    position: fixed; top: 0; width: 100%; padding: 30px 50px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(0,0,0,0.8); backdrop-filter: blur(10px); z-index: 1000;
 }
+.logo { font-family: 'Cinzel', serif; font-size: 1.5rem; letter-spacing: 5px; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { text-decoration: none; color: var(--primary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition); opacity: 0.7; }
+.nav-links a:hover { opacity: 1; }
 
-
-.logo-area {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-
-.main-logo {
-    height: 50px;
-    width: auto;
-}
-
-
-.logo-text {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.9rem;
-    color: #ffffff !important;
-}
-
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
-
-
-.nav-links li a {
-    color: #ffffff !important; /* FORÇA COR BRANCA */
-    font-size: 0.65rem;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-weight: 300;
-    opacity: 0.7;
-    transition: 0.3s;
-}
-
-
-/* -----------------------------------------------------------
-   HERO (ABERTURA COM ESPAÇO NO BOTÃO)
------------------------------------------------------------ */
-
+/* Hero Section */
 .hero {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+    display: flex; align-items: center; justify-content: center; text-align: center;
 }
+.main-brand { font-family: 'Cinzel', serif; font-size: 5rem; letter-spacing: 15px; margin: 10px 0; animation: fadeIn 2s ease; }
+.sub-brand { font-weight: 300; letter-spacing: 10px; opacity: 0.6; }
+.tagline { font-weight: 300; letter-spacing: 4px; margin-bottom: 30px; color: var(--text-muted); }
 
-
-.hero-bg-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../img/fundo.png') center/cover no-repeat;
-    opacity: 0.1;
-    z-index: -1;
+/* Botões */
+.btn-outline {
+    padding: 15px 40px; border: 1px solid var(--primary); color: var(--primary);
+    text-decoration: none; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;
+    transition: var(--transition);
 }
+.btn-outline:hover { background: var(--primary); color: black; }
 
+/* Grid de Serviços */
+.section { padding: 100px 10%; }
+.section-title { font-family: 'Cinzel', serif; text-align: center; font-size: 2.5rem; margin-bottom: 60px; letter-spacing: 5px; text-transform: uppercase; }
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: rgba(255,255,255,0.1); }
+.service-item { background: var(--bg-black); padding: 40px; text-align: left; transition: var(--transition); border-bottom: 1px solid rgba(255,255,255,0.05); }
+.service-item span { display: block; font-size: 0.7rem; color: var(--text-muted); margin-bottom: 10px; }
+.service-item:hover { background: #111; padding-left: 50px; color: #38bdf8; }
 
-.main-title {
-    font-size: clamp(2rem, 10vw, 4rem);
-    font-weight: 300;
-    letter-spacing: 15px;
-    color: #ffffff;
-}
+/* Estoque */
+.stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.car-card { background: var(--gray); overflow: hidden; transition: var(--transition); border: 1px solid transparent; }
+.car-card:hover { transform: translateY(-10px); border-color: rgba(255,255,255,0.3); }
+.car-img { height: 250px; background-size: cover; background-position: center; filter: grayscale(100%); transition: 0.8s; }
+.car-card:hover .car-img { filter: grayscale(0%); }
+.car-info { padding: 25px; text-align: center; }
+.btn-small { background: none; border: 1px solid rgba(255,255,255,0.2); color: white; padding: 10px 20px; cursor: pointer; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; transition: 0.3s; }
+.btn-small:hover { border-color: white; }
 
+/* Footer */
+.footer { padding: 80px 10%; text-align: center; background: #000; border-top: 1px solid rgba(255,255,255,0.05); }
+.btn-whatsapp { display: inline-block; margin-top: 20px; color: #25D366; text-decoration: none; border: 1px solid #25D366; padding: 12px 30px; border-radius: 50px; transition: 0.3s; }
+.btn-whatsapp:hover { background: #25D366; color: black; }
 
-.tagline {
-    font-weight: 300;
-    font-size: 1.1rem;
-    color: #cccccc;
-    margin-bottom: 80px !important; /* DISTÂNCIA DO BOTÃO EXPLORAR */
-}
-
-
-/* -----------------------------------------------------------
-   BOTÕES (AQUI CORRIGE O VISUAL ROXO)
------------------------------------------------------------ */
-
-.btn-main, 
-.btn-zap, 
-.btn-card {
-    display: inline-block;
-    padding: 15px 40px;
-    border: 1px solid #ffffff;
-    color: #ffffff !important; /* FORÇA O BRANCO */
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    transition: 0.4s;
-    background: transparent;
-}
-
-
-.btn-main:hover, 
-.btn-zap:hover {
-    background: #ffffff;
-    color: #000000 !important; /* INVERTE NO HOVER */
-}
-
-
-/* -----------------------------------------------------------
-   SERVIÇOS (GRID QUE NÃO BUGARÁ NO CELULAR)
------------------------------------------------------------ */
-
-.section-container {
-    padding: 120px 8%;
-    text-align: center;
-}
-
-
-.grid-services {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    width: 100%;
-}
-
-
-.service-item {
-    border: 1px solid #111111;
-    padding: 40px;
-    background: #050505;
-    transition: 0.3s;
-}
-
-
-.service-item h3 {
-    font-size: 0.8rem;
-    font-weight: 300;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-
-/* -----------------------------------------------------------
-   ESTOQUE (FOTOS COLORIDAS E PREÇOS GRANDES)
------------------------------------------------------------ */
-
-.bg-minimal {
-    background-color: #050505;
-}
-
-
-.grid-stock {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 60px;
-}
-
-
-.card-img {
-    height: 350px;
-    background-size: cover;
-    background-position: center;
-}
-
-
-.card-info {
-    padding: 30px 10px;
-}
-
-
-.card-description {
-    font-size: 0.65rem;
-    color: #888888;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
-
-
-.card-price {
-    font-size: 1.5rem; /* PREÇO BEM GRANDE */
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 25px;
-}
-
-
-/* -----------------------------------------------------------
-   RODAPÉ (FOOTER)
------------------------------------------------------------ */
-
-.footer {
-    padding-top: 120px;
-    padding-bottom: 60px;
-    padding-left: 8%;
-    padding-right: 8%;
-    text-align: center;
-    border-top: 1px solid #111111;
-}
-
-.footer-title {
-    color: #ffffff;
-    font-weight: 300;
-    letter-spacing: 4px;
-    margin-bottom: 40px; /* MAIS ESPAÇO ABAIXO DO TÍTULO */
-    text-transform: uppercase;
-}
-
-.address {
-    color: #888888;
-    font-size: 0.9rem;
-    
-    /* --- AQUI ESTÁ A CORREÇÃO --- */
-    line-height: 2.5;       /* ESPAÇO GRANDE ENTRE AS LINHAS DO TEXTO */
-    margin-bottom: 70px;    /* DISTÂNCIA GENEROSA PARA OS BOTÕES */
-    
-    letter-spacing: 1px;
-    font-weight: 300;
-}
-
-.whatsapp-group {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-bottom: 100px;  /* ESPAÇO PARA O COPYRIGHT */
-    flex-wrap: wrap;
-}
-
-.copyright {
-    font-size: 0.55rem;
-    letter-spacing: 3px;
-    color: #333333;
-    text-transform: uppercase;
-    margin-top: 20px;
-}
-
-/* AJUSTE MOBILE */
+/* Responsivo */
 @media (max-width: 768px) {
-    .address {
-        font-size: 0.85rem;
-        line-height: 2.2;    /* RESPIRO NO CELULAR */
-        margin-bottom: 60px;
-    }
+    .main-brand { font-size: 2.5rem; }
+    .navbar { padding: 20px; flex-direction: column; gap: 15px; }
+    .nav-links { font-size: 0.6rem; gap: 15px; }
 }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
