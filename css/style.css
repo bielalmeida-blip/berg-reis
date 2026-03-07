@@ -52,3 +52,56 @@ body { background-color: #000; color: #fff; font-family: 'Montserrat', sans-seri
 .whatsapp_buttons_group { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .btn_wa_footer { border: 1px solid rgba(255,255,255,0.2); padding: 15px 35px; color: #fff; text-decoration: none; font-size: 0.7rem; letter-spacing: 2px; transition: 0.4s; }
 .btn_wa_footer:hover { background: #fff; color: #000; }
+
+@media (max-width: 768px) {
+    /* Ajuste da Navbar no Celular */
+    .nav_container_flex {
+        padding: 15px 20px;
+        flex-direction: column; /* Coloca a logo em cima e o menu embaixo */
+        gap: 15px;
+    }
+
+    .main_logo {
+        height: 40px; /* Reduz um pouco a logo no celular */
+    }
+
+    .nav_links_list {
+        gap: 15px; /* Diminui o espaço entre os nomes do menu */
+        flex-wrap: wrap; /* Permite que o menu quebre linha se precisar */
+        justify-content: center;
+    }
+
+    .nav_links_list a {
+        font-size: 0.6rem; /* Diminui a fonte no celular */
+        letter-spacing: 2px;
+    }
+
+    /* Ajuste do Título Principal no Celular (FOTO 1/7) */
+    .hero_main_title {
+        font-size: 2.8rem; /* Reduz o tamanho para caber na tela do celular */
+        letter-spacing: 10px;
+    }
+
+    .hero_sub_specialist {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+    }
+
+    /* Ajuste dos Cards de Carro no Celular */
+    .stock_grid_premium {
+        grid-template-columns: 1fr; /* Um carro por linha no celular */
+        padding: 0 10px;
+    }
+
+    /* Ajuste dos Botões de WhatsApp no Rodapé */
+    .whatsapp_buttons_group {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .btn_wa_footer {
+        width: 100%; /* Botão ocupa a largura toda no celular */
+        max-width: 300px;
+    }
+}
