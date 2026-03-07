@@ -140,3 +140,58 @@ body { background-color: #000; color: #fff; font-family: 'Montserrat', sans-seri
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.5);
 }
+
+.whatsapp_cta_container {
+    width: 100%;
+    padding: 120px 20px;
+    text-align: center; /* Centraliza o conteúdo */
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta_small_text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.btn_premium_wa {
+    display: inline-block; /* Importante para o padding funcionar */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 22px 60px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn_premium_wa:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #fff;
+    letter-spacing: 7px; /* Efeito de expansão elegante */
+    padding: 22px 70px;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    .btn_premium_wa {
+        width: 90%;
+        padding: 20px 20px;
+        letter-spacing: 2px;
+    }
+    .btn_premium_wa:hover {
+        letter-spacing: 3px;
+        padding: 20px 20px;
+    }
+}
