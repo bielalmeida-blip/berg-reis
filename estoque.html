@@ -1,33 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Estoque - Berg Reis</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Toys | Berg Reis Car Specialist</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,700;1,500&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: #000;">
 
-<header>
-    <h1>Estoque Premium</h1>
-</header>
+    <nav class="navbar_fixed">
+        <div class="nav_container_flex">
+            <a href="index.html" class="logo_link">
+                <img src="img/logo.png" alt="Logo" class="main_logo">
+            </a>
+            <div class="nav_links_container">
+                <ul class="nav_links_list">
+                    <li><a href="index.html">Voltar para Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<section class="estoque">
+    <section class="stock_header" style="padding-top: 150px; text-align: center;">
+        <h1 class="stock_main_title" style="font-size: 3.5rem; letter-spacing: 15px;">All Toys</h1>
+        <p class="hero_sub_specialist" style="margin-top: 10px;">Inventário Exclusivo</p>
+    </section>
 
-    <div class="carro">
-        <img src="lamborghini-sto.jpg" alt="Lamborghini STO">
-        <h2>Lamborghini STO</h2>
-    </div>
+    <section class="stock_section">
+        <div class="stock_grid_premium">
+            
+            <div class="car_card_exclusive">
+                <div class="car_image_wrapper">
+                    <img src="img/sto.jpg" alt="Lamborghini STO" class="car_img_color">
+                </div>
+                <div class="car_details_content">
+                    <h3 class="car_model_name">Lamborghini STO</h3>
+                    <p class="car_description">V10 | 640CV | Track Focused</p>
+                    <p class="car_price">R$ 6.500.000</p>
+                    <a href="https://wa.me/5585999999999?text=Interesse%20STO" target="_blank" class="btn_saiba_mais">SAIBA MAIS</a>
+                </div>
+            </div>
 
-    <div class="carro">
-        <img src="porsche-911.jpg" alt="Porsche 911">
-        <h2>Porsche 911</h2>
-    </div>
+            <div class="car_card_exclusive">
+                <div class="car_image_wrapper">
+                    <img src="img/911.webp" alt="Porsche 911" class="car_img_color">
+                </div>
+                <div class="car_details_content">
+                    <h3 class="car_model_name">Porsche 911</h3>
+                    <p class="car_description">Flat-6 | Performance & Design</p>
+                    <p class="car_price">R$ 1.200.000</p>
+                    <a href="https://wa.me/5585999999999?text=Interesse%20911" target="_blank" class="btn_saiba_mais">SAIBA MAIS</a>
+                </div>
+            </div>
 
-    <div class="carro">
-        <img src="mclaren-765lt.jpg" alt="McLaren 765LT">
-        <h2>McLaren 765LT</h2>
-    </div>
+            <div class="car_card_exclusive">
+                <div class="car_image_wrapper">
+                    <img src="img/larenn.jpeg" alt="McLaren 600LT" class="car_img_color">
+                </div>
+                <div class="car_details_content">
+                    <h3 class="car_model_name">McLaren 600LT Spider</h3>
+                    <p class="car_description">V8 Twin-Turbo | 600CV</p>
+                    <p class="car_price">R$ 3.090.000</p>
+                    <a href="https://wa.me/5585999999999?text=Interesse%20600LT" target="_blank" class="btn_saiba_mais">SAIBA MAIS</a>
+                </div>
+            </div>
 
-</section>
+            </div>
+    </section>
+
+    <footer style="padding: 100px 0; text-align: center; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p class="hero_description_slogan" style="font-size: 0.7rem; opacity: 0.4;">Veículos sujeitos a disponibilidade. Entre em contato para mais informações.</p>
+    </footer>
 
 </body>
 </html>
