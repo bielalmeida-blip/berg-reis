@@ -105,3 +105,38 @@ body { background-color: #000; color: #fff; font-family: 'Montserrat', sans-seri
         max-width: 300px;
     }
 }
+.detailed_services_container {
+    padding: 20px 10%;
+    background: #000;
+}
+
+.service_row_layout {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service_box_detail {
+    flex: 1;
+    min-width: 300px;
+    padding: 60px 40px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service_box_detail h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.service_box_detail p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200; /* Extra Light para luxo */
+    font-size: 0.8rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.5);
+}
